@@ -38,14 +38,7 @@ done
 
 mkdir -p "$MEDIA_ROOT"
 
-# Wait for Postgres, then migrate (this also registers the recurring jobs).
-for i in $(seq 1 30); do
-  if python manage.py migrate --noinput; then break; fi
-  if [ "$i" = 30 ]; then echo "railway-start: migrate failed" >&2; exit 1; fi
-  echo "railway-start: database not ready, retrying in 5 s ($i/30)"
-  sleep 5
-done
-
+# Wait for Postgres, migrate and create the first admin (under a DB lock).
 python /usr/local/bin/railway-bootstrap.py
 
 python manage.py run_studio_worker &
