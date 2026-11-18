@@ -4,8 +4,11 @@ Runs on every start but only acts when the database has no superuser yet,
 so changing the password in the app later is never overwritten.
 """
 import os
+import sys
 
-import django
+sys.path.insert(0, "/app")
+
+import django  # noqa: E402
 
 django.setup()
 
