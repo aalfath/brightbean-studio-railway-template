@@ -1,3 +1,5 @@
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/brightbean-studio-1?utm_medium=integration&utm_source=button&utm_campaign=brightbean-studio)
+
 # BrightBean Studio on Railway
 
 A one-click [Railway](https://railway.com) template for [BrightBean Studio](https://github.com/brightbeanxyz/brightbean-studio), the open-source, self-hostable social media management platform: plan, compose, schedule, approve, publish and monitor posts across Facebook, Instagram, LinkedIn, TikTok, YouTube, Pinterest, Threads, Bluesky, Google Business Profile, Mastodon and DEV.to.
